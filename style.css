@@ -253,7 +253,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 }
 .poster-right{
     position: relative;
-    background-image: url(https://kol.weallnet.com/static/media/banner.15e6ca6a.png);
+    background-image: url(./image/poster.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
