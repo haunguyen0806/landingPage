@@ -6,15 +6,22 @@
     font-family: 'Poppins', sans-serif;
 }
 .header{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    transition: 0.3s ease background-color;
+}
+.header .navbar {
+    padding:20px 220px;
+}
+.header .navbar .navbar-brand{
+    padding-left: 50px;
 }
 .header .navbar-toggler i{
     color: #fff;
@@ -72,7 +79,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 {
   position: absolute;
   left: 15%;
-  width: 25%;
+  width: 30%;
   color: #fff;
   
 }
@@ -93,9 +100,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 #controls #mutebtn i {
     font-size: 35px;
 }
-#controls .button-wiggle {
-    animation: wiggle 3s 2s infinite;
-  }
+
   
   @keyframes wiggle {
       5%,
@@ -124,6 +129,28 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
           transform: scale(1.15) rotate(0);
       }
   }
+svg{
+    width: 80px;
+    cursor: pointer;
+}
+  
+.circle_lg{
+    stroke-dasharray: 600px 1500px;
+    transition: all .5s;
+}
+  
+.circle_sm{
+    opacity: 1;
+    transition: all .25s;
+}
+  
+svg.mute .circle_lg{
+    stroke-dashoffset: -1360px;
+}
+  
+svg.mute .circle_sm{
+opacity: 0;
+}
 .text h2{
     font-family: Roboto;
     font-style: normal;
@@ -226,10 +253,10 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 }
 .poster-left .text_poster{
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 30%;
+    left: 20%;
     color: #fff;
-    width: 45%;
+    width: 50%;
 }
 .poster-left .text_poster .title{
     font-size: 40px;
@@ -247,7 +274,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
     /* border: none; */
     color: #fff;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 16px;
     line-height: 19px;
 }
@@ -307,6 +334,15 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
     color: #fff;
     font-size: 14px;
 }
+.footer_info .info_items ul {
+    text-decoration: none;
+}
+.footer_info .info_items ul li a{
+    transition: 0.5s;
+}
+.footer_info .info_items ul li a:hover {
+    color: #ff6b00;
+}
 .footer .footer_right{
     /* padding:0 100px; */
     margin: 0 ;
@@ -314,7 +350,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 }
 .footer_right span{
     border-right: 1px solid #fff;
-    padding: 0 10px;
+    padding: 0 10px; 
     text-decoration: none;
     color: white;
     margin-right:10px;
@@ -324,6 +360,12 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
 }
 .footer_right .contact-info a{
     text-decoration: none;
+}
+.footer_right .contact-info .email span{
+    transition: 0.5s ;
+}
+.footer_right .contact-info .email span:hover{
+    color: #ff6b00;
 }
 .footer_right .contact .contact-app a{
     text-decoration: none;
@@ -335,7 +377,7 @@ background: linear-gradient(90deg, rgba(25,35,53,1) 0%, rgba(25,35,53,1) 25%, rg
     text-align: center;
     font-size: 14px;
 }
-@media (min-width:321px) and (max-width:736px) {
+@media (min-width:320px) and (max-width:736px) {
     .showcase{
         font-size: 12px;
         background-color: #27344A;
